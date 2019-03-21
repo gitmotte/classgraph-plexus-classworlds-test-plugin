@@ -7,8 +7,9 @@ public class TestWithMain extends MySuperClass {
         ClassGraphUtils.doClassGraphCalls(MySuperClass.class);
 
         // do not catch the exception - but classgraph finalises
-        // without java.lang.NoClassDefFoundError:
+        // WITHOUT java.lang.NoClassDefFoundError:
         // nonapi/io/github/classgraph/utils/FileUtils$3
         throw new IllegalArgumentException("do not catch exception");
+        // ==> everything is fine.
     }
 }
